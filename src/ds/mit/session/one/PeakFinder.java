@@ -2,6 +2,10 @@ package ds.mit.session.one;
 
 import java.util.Arrays;
 
+/**
+ * Complexity O(log n) bas of log is 2.
+ */
+
 public class PeakFinder {
 
   public static void main(String[] args) {
