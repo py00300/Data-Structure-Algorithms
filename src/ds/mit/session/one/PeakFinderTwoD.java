@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Complexity O(log n) bas of log is 2.
  */
 
-public class PeakFinder {
+public class PeakFinderTwoD {
 
   public static void main(String[] args) {
     int[] numbers = {1, 2, 3, 1};
