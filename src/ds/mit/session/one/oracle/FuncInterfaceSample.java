@@ -8,10 +8,11 @@ public class FuncInterfaceSample {
       - Functional Interfaces provide a target Type for lambda expressions
       - Lambda Expressions can be bound to different functional interfaces if the method signatures are compatible
       - Functions descriptors: shows input types and return types (method signature without a method name)
-        - examples: () -> void
-        -  (int, int) -> int equivalent functional interface interface with JUST ONE method with any name as public int anyName(int left, int right);
+        - examples: () -> void : equivalent functional interface interface with JUST ONE method with any name as public void anyName();
+        -  (int, int) -> int : equivalent functional interface interface with JUST ONE method with any name as public int anyName(int left, int right);
+        - () -> String : equivalent functional interface interface with JUST ONE method with any name as public String anyName();
      */
-   Runnable myLambda = () -> System.out.println("Hey this is Lambda");
+    Runnable myLambda = () -> System.out.println("Hey this is Lambda");
 
   }
 }

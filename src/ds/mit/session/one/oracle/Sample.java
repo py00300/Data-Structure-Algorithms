@@ -27,10 +27,11 @@ public class Sample {
     for (int i = 0; i < n - 1; i++) {
       for (int j = 0; j < n - 1; j++) { // j = 0 to n -1,
 
-
         int temp = Math.abs(numbers[i] - numbers[j]);
         // numbers[j+1]= temp;
-        System.out.println(i+ " ,j:" + j + ", "+ numbers[j]+ "," + numbers[j + 1] + " ,res: " + result + " ,tmp: " +temp);
+        System.out.println(
+            i + " ,j:" + j + ", " + numbers[j] + "," + numbers[j + 1] + " ,res: " + result
+                + " ,tmp: " + temp);
         if (result > temp && i != j) {
           result = temp;
         }
