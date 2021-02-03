@@ -1,0 +1,96 @@
+Object Oriented Modeling:
+when solving a problem object oriented modeling involves the practice of representing key concepts
+through objects in your software. Depending on the problem, many concepts, even instances of people, places or things become distinct object in software.
+
+Abstraction:
+Abstraction is the idea of simplifying a concept in the problem domain to its essentials within some context.
+Abstraction allows you to better understand a concept by breaking it down into simplified description that ignores unimportant details.
+
+Rule of least astonishment:
+the abstraction captures the essential attributes and behaviour for a concept with no surprises and no definitions that fall beyond its scope.
+you dont want to surprise anyone trying to understand your abstraction with irrelevant characteristics.
+
+Basics are attributes and behaviours
+
+Encapsulation:
+forms a self-contained object by building the data and functions it requires to work, exposes an interface whereby
+other objects can access and use it, and restricts access to certain inside details.
+- Security is increased due to restricted and controlled access to attributes and methods.
+- Reusability is increased because the interface of a class can stay the same even if its internal implementation changes.
+- Changing the software is easier because related data and code are located in the same place.
+
+Decomposition:
+is taking a whole thing and dividing it up into different parts. Or, on the flip side taking a bunch of separate parts with different functionalities,
+and combining them together to form a whole. Decomposition allows you to further break down problems into pieces that are easier to understand and solve.
+
+Generalization:
+can be achieved by classes through inheritance.
+In generalization we take repeated, common, or shared characteristics between two or more classes and factor them out into another class.
+Specifically, you can have two classes, a parent class and a child class.
+When a child class inherits from a parent class, the child class will have the attributes and behaviors of the parent class.
+You place common attribute and behaviors in your parent class. There can be multiple child classes that inherit from a parent class, and they all will receive these common attributes and behaviors. The child classes can also have additional attributes and behaviors,
+which allow them to be more specialized in what they can do. In standard terminology, a parent class is known as a superclass and a child class is called the subclass.
+
+decomposition:
+is taking a whole thing and dividing it up into different parts. Or, on the flip side, taking a bunch of separate parts with different functionalities and combining them together to form a whole.
+What does this look like when programming? Is there any way we can expand this definition and make it more specific?
+There are three types of relationships found in decomposition, association, aggregation, and composition.
+They define the interaction between the whole and the parts.
+
+Association:
+is some relationship. This means that there is a loose relationship between two objects.
+These objects may interact with each other for some time. For example, an object of a class may use services/methods provided by object of another class.
+This is like the relationship between person and airline. A person does not generally own an airline, but can interact with one. An airline can also interact with many person objects.
+There are some persons and some airlines, neither is dependent on the other.
+If 1 object destroy the other one can still exist and operate.
+
+
+Class1 0..* ----------- 0..* Class2
+
+in code: public Class1 {
+  public void doSomething(Class2 class2) {
+   ....
+  }
+}
+
+Aggregation:
+is a has-a relationship where a whole has parts that belong to it. There may be sharing of parts among the wholes in this relationship.
+The has-a relationship from the whole to the parts is considered weak. What this means is although parts can belong to the wholes, they can also exist independently.
+If 1 object destroy the other one can still exist and operate.
+
+Airliner 0..* <>----- 0..* CrewMember (empty diamond)
+
+public class Airliner {
+  private List<CrewMember> crew;
+
+  public Airliner() {
+    crew = new ArrayList<>();
+  }
+  public void add(CrewMember cm) {
+    ...
+  }
+}
+
+Composition:
+is an exclusive containment of parts, otherwise known as a strong has-a relationship.
+What this means is that the whole cannot exist without its parts.
+If loses any of its parts, the whole ceases to exist. If the whole is destroyed, then all of its parts are destroyed too.
+Usually, you can only access the parts through its whole.
+If 1 object destroyed the other one cannot exist and operate.
+
+House <>---- 1..* Room (Filled Diamond)
+
+public class Human {
+  private Brain brain;
+
+  public Human() {
+     this.brain = new brain;
+  }
+}
+
+The hash symbol is used to communicate that the animals attributes are protected.
+In Java, a protected attribute or method can only be accessed by, the encapsulating class itself, all subclasses, all classes within the same package.
+In Java, a package is simply a means in which the classes can be organized into a namespace that represents those classes.
+
+Class: Implement behaviours, implement interfaces, inherit classes, describe behaviours
+Interface: inherit interfaces, describe behaviours
