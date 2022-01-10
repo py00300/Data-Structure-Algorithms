@@ -8,5 +8,6 @@ public class Runner {
 
     a.log();
     a.log2();
+    a.log3();
   }
 }

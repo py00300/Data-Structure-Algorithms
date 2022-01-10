@@ -32,9 +32,9 @@ public class StreamApiJavaEight {
 
     // A sample of Pipeline
     Stream.of("bob", "fred", "alice", "ali")
-       .map(name -> name.toUpperCase())
-       .filter(s -> s.length() == 5)
-       .sorted()
-       .forEach(System.out::println);
+        .map(name -> name.toUpperCase())
+        .filter(s -> s.length() == 5)
+        .sorted()
+        .forEach(System.out::println);
   }
 }
