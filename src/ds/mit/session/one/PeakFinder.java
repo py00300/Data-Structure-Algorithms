@@ -1,6 +1,7 @@
 package ds.mit.session.one;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Complexity O(log n) bas of log is 2.
@@ -9,6 +10,9 @@ import java.util.Arrays;
 public class PeakFinder {
 
   public static void main(String[] args) {
+    char a = (char) 32;
+    System.out.println(a);
+    Random random = new Random();
     int[] numbers = {1, 2, 3, 1};
     int peak = findPeak(numbers);
     System.out.println(peak);

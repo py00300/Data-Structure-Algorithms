@@ -10,8 +10,8 @@ public class YieldExample {
     consumer.setPriority(Thread.MAX_PRIORITY); //Max Priority
 
     //for (int i = 0 ; i < 10 ; i++) {
-      producer.start();
-      consumer.start();
+    producer.start();
+    consumer.start();
     //}
 
   }
